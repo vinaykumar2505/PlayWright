@@ -1,6 +1,7 @@
 import pytest
 
 from pages.home import Hompage
+from pages.login import LoginPage
 from pages.result import ResultPage
 
 
@@ -8,6 +9,10 @@ from pages.result import ResultPage
 def homepageobj(page):
     homepageobj_fixture = Hompage(page)
     return homepageobj_fixture
+@pytest.fixture
+def loginpageobj(page):
+    loginpage_fixture = LoginPage(page)
+    return loginpage_fixture
 
 @pytest.fixture
 def resultpageobj(page):

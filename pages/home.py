@@ -15,6 +15,8 @@ class Hompage:
     def enterTextSearch(self,product):
         self.enterSearch.wait_for(state="visible")
         self.enterSearch.fill(product)
+    def clickOnaccountsandlist(self):
+        self.accountsandlist.click()
     def cartIconVisibility(self):
         self.carticon.wait_for(state="visible")
     def clickSearch(self):
