@@ -1,3 +1,4 @@
+import allure
 from playwright.sync_api import expect
 
 
@@ -9,14 +10,17 @@ class Hompage:
         self.searchurl = page.get_by_placeholder("Search Amazon.in")
         self.enterSearch = page.locator("#twotabsearchtextbox")
         self.clickSearchBtn = page.locator("#nav-search-submit-button")
-
+    @allure.step("Search is visible.in")
     def searchbarVisibility(self):
         self.searchBar.wait_for(state="visible")
+    @allure.step("enter search text")
     def enterTextSearch(self,product):
         self.enterSearch.wait_for(state="visible")
         self.enterSearch.fill(product)
+    @allure.step("clickaccount")
     def clickOnaccountsandlist(self):
         self.accountsandlist.click()
+    @allure.step("check cart icon")
     def cartIconVisibility(self):
         self.carticon.wait_for(state="visible")
     def clickSearch(self):

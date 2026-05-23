@@ -7,7 +7,8 @@ from pages.result import ResultPage
 
 
 
-@pytest.mark.resutt
+@pytest.mark.test3
+
 def test_validatingCartCount(page:Page, launchurl, homepageobj, resultpageobj):
     #page.goto("https://www.amazon.in/")
     #homepageobj= Hompage(page)
