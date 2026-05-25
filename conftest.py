@@ -34,3 +34,17 @@ def pytest_runtest_makereport(item,call):
             step = report.when
             screenshot = page.screenshot()
             allure.attach(screenshot,name=f"failure screenshot ({step})",attachment_type=allure.attachment_type.PNG)
+@pytest.fixture
+def cartpageobj(page):
+    from pages.cart import CartPage
+    return CartPage(page)
+
+@pytest.fixture
+def accountpageobj(page):
+    from pages.account import AccountPage
+    return AccountPage(page)
+
+@pytest.fixture
+def orderspageobj(page):
+    from pages.orders import OrdersPage
+    return OrdersPage(page)

@@ -1,0 +1,3 @@
+✓ Login successful - Current URL: https://www.amazon.in/?ref_=nav_ya_signin
+✓ Account section shows: Account & Lists
+✓ Search successful: Found 28 order(s) matching 'iphone'
